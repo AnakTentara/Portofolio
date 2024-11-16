@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <script src="./node_modules/feather-icons/dist/feather.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/error.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/js/fading.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="/css/particle.css">
+    <script src="/js/particle.js"></script>
+</head>
+
+<body class="text-white">
+    <div id="particles-js" class="fixed inset-0 z-0"></div>
+    <nav data-aos="fade-down" class="flex justify-between items-center bg-opacity-50 backdrop-blur-lg mt-4 mx-auto w-11/12 px-7 py-5 z-10">
+        <a href="/index"><img class="w-16 h-16 mr-4" src="/photos/PP 2023.png" alt="Logo"></a>
+        <div class="hidden md:flex space-x-6 items-center">
+            <a href="/index"
+                class="text-white hover-primarytext transform hover:scale-105 transition duration-300 ease-in-out">Home</a>
+            <a href="/page/projects"
+                class="text-white hover-primarytext transform hover:scale-105 transition duration-300 ease-in-out">Projects</a>
+            <a href="/page/about"
+                class="text-white hover-primarytext transform hover:scale-105 transition duration-300 ease-in-out">About
+                Me</a>
+            <a href="/page/achievements"
+                class="text-white hover-primarytext hover:opacity-70 transform hover:scale-105 transition duration-300 ease-in-out">IRL
+                Achievements</a>
+            <a href="/page/contact"
+                class="text-white hover-primarytext transform hover:scale-105 transition duration-300 ease-in-out">Contact
+                Me</a>
+        </div>
+        <button id="hamburger"
+            class="md:hidden text-white hover-primarytext transform hover:scale-105 transition duration-300 ease-in-out">
+            <i data-feather="menu"></i>
+        </button>
+    </nav>
+    <nav>
+        <!-- Hamburger Menu (Slide-In from Right) -->
+        <div id="mobile-menu"
+            class="fixed top-0 right-0 h-full w-3/4 max-w-sm bg-gray-900 text-white transform translate-x-full transition-transform duration-300 ease-in-out z-20">
+            <div class="flex items-center justify-end p-4">
+                <button id="close-menu">
+                    <i data-feather="x" class="text-white"></i>
+                </button>
+            </div>
+            <div class="flex flex-col items-start space-y-6 px-6 mt-10">
+                <a href="/index" class="hover-primarytext">Home</a>
+                <a href="/page/projects" class="hover-primarytext">Projects</a>
+                <a href="/page/about" class="hover-primarytext">About Me</a>
+                <a href="/page/achievements" class="hover-primarytext">IRL Achievements</a>
+                <a href="/page/contact" class="hover-primarytext">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+    <div data-aos="fade-up" class="flex justify-center min-h-screen items-center">
+        <div class="text-center">
+            <h1 class="text-6xl font-bold mb-4">404</h1>
+            <p class="text-xl mb-6">Oops! The page you are looking for doesn't exist.</p>
+            <a href="/" class="text-indigo-400 hover:text-indigo-600 transition duration-300">Go back to Home</a>
+        </div>
+    </div>
+        <!-- Footer Section -->
+        <footer class="text-center mt-16 py-4 bg-gray-800">
+            <p class="text-gray-400">© 2024 Haikal Mabrur. All rights reserved.</p>
+        </footer>
+    <script src="/js/fading.js"></script>
+    <script src="/js/particle.js"></script>
+    <script src="/js/hamburgermenu.js"></script>
+    
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>

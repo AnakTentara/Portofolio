@@ -1,0 +1,10 @@
+.hover-primarytext:hover {
+    color: #ff1f44;
+    display: block;
+  }
+  
+  .backdrop-blur-lg {
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    background-color: #5050505d;
+  }

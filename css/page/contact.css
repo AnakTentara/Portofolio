@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body,
+html {
+  height: 100%;
+  scrollbar-width: thin;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.titletext {
+  color: #0a0a0a;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  display: inline-block;
+  margin-bottom: 20px;
+  background: linear-gradient(120deg,
+      #1c99fe 20.69%,
+      #7644ff 50.19%,
+      #fd4766 79.69%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hover-primarytext:hover {
+  color: #ff1f44;
+  display: block;
+}
+
+.backdrop-blur-lg {
+  backdrop-filter: blur(5px);
+  border-radius: 25px;
+  background-color: #5050505d;
+}
+
+/* Flex layout for the image and social media links */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure image is a perfect circle */
+img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Add spacing between icons and text */
+a {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  /* Increase font size for better readability */
+  transition: color 0.3s ease;
+}
+
+a i {
+  margin-right: 10px;
+}
+
+/* Social media hover effect */
+a:hover {
+  color: #1c99fe;
+}
+
+/* Title of Social Media Box */
+h3 {
+  color: white;
+  font-size: 1.25rem;
+}
+
+/* Mobile and larger screen responsiveness */
+@media (min-width: 768px) {
+  .flex-1 {
+    flex: 1;
+  }
+}
+
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background-color: rgba(44, 44, 44, 0.4); /* Optional: adds slight background when sticky */
+  backdrop-filter: blur(10px); /* Optional: adds blur effect behind the navbar */
+  transition: top 0.3s ease-in-out; /* Smooth transition for sticky effect */
+  width: 100%; /* Ensure navbar is full width */
+}
+
+.sticky-navbar a {
+  color: white; /* Text color */
+}
+
+.sticky-navbar a:hover {
+  color: #ff1f44; /* Color when hovered */
+}

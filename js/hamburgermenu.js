@@ -1,13 +1,15 @@
-const navbarNav = document.querySelector('.navbar-nav')
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const closeMenu = document.getElementById("close-menu");
 
-document.querySelector('#hamburger-menu').onclick = () => {
-    navbarNav.classList.toggle('active');
-}
+    if (hamburger && mobileMenu && closeMenu) {
+        hamburger.addEventListener("click", () => {
+            mobileMenu.classList.remove("translate-x-full");
+        });
 
-const Hamburger = document.querySelector('#hamburger-menu');
-
-document.addEventListener('click', function (e) {
-    if (!Hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
-        navbarNav.classList.remove('active');
+        closeMenu.addEventListener("click", () => {
+            mobileMenu.classList.add("translate-x-full");
+        });
     }
 });

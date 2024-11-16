@@ -5,121 +5,243 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Haikal</title>
-  <link rel="stylesheet" href="/css/aboutme.css" />
+  <link rel="stylesheet" href="/css/page/aboutme.css" />
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet" />
   <link rel="icon" type="image/x-icon" href="/photos/favicon.png" />
   <script src="https://unpkg.com/feather-icons"></script>
   <script src="/node_modules/feather-icons/dist/feather.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://code.iconify.design/2/2.0.0/iconify.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <link rel="stylesheet" href="/css/slider.css">
+  <link rel="stylesheet" href="/css/particle.css">
+  <link rel="stylesheet" href="/css/hoverfx.css">
 </head>
 
 <body>
-    <nav class="navbar">
-    <a href="/index.html"><img class="logo" src="/photos/PP 2023.png"></a>
-    <div class="navbar-nav">
-      <a href="/index.html">Home</a>
-      <a href="/page/portofolio.html">Portofolio</a>
-      <a href="/page/about.html">About Me</a>
-      <a href="/page/contact.html">Contact Me</a>
+  <div id="particles-js" class="fixed inset-0 z-0"></div>
+  <nav data-aos="fade-down" class="flex justify-between items-center bg-opacity-50 backdrop-blur-lg mt-4 mx-auto w-11/12 px-7 py-5 z-40 sticky-navbar">
+    <a href="/index"><img class="w-16 h-16 mr-4" src="/photos/PP 2023.png" alt="Logo"></a>
+    <div class="hidden md:flex space-x-6 items-center">
+      <a href="/index"
+        class="text-white hover-primarytext transform hover:scale-105 transition duration-300 ease-in-out">Home</a>
+      <a href="/page/projects"
+        class="text-white hover-primarytext transform hover:scale-105 transition duration-300 ease-in-out">Projects</a>
+      <a href="/page/about"
+        class="text-white hover-primarytext transform hover:scale-105 transition duration-300 ease-in-out">About
+        Me</a>
+      <a href="/page/achievements"
+        class="text-white hover-primarytext hover:opacity-70 transform hover:scale-105 transition duration-300 ease-in-out">IRL
+        Achievements</a>
+      <a href="/page/contact"
+        class="text-white hover-primarytext transform hover:scale-105 transition duration-300 ease-in-out">Contact
+        Me</a>
     </div>
-    <div class="navbar-extra">
-      <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+    <button id="hamburger"
+      class="md:hidden text-white hover-primarytext transform hover:scale-105 transition duration-300 ease-in-out">
+      <i data-feather="menu"></i>
+    </button>
+  </nav>
+  <nav>
+    <!-- Hamburger Menu (Slide-In from Right) -->
+    <div id="mobile-menu"
+      class="fixed top-0 right-0 h-full w-3/4 max-w-sm bg-gray-900 text-white transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+      <div class="flex items-center justify-end p-4">
+        <button id="close-menu">
+          <i data-feather="x" class="text-white"></i>
+        </button>
+      </div>
+      <div class="flex flex-col items-start space-y-6 px-6 mt-10">
+        <a href="/index" class="hover-primarytext">Home</a>
+        <a href="/page/projects" class="hover-primarytext">Projects</a>
+        <a href="/page/about" class="hover-primarytext">About Me</a>
+        <a href="/page/achievements" class="hover-primarytext">IRL Achievements</a>
+        <a href="/page/contact" class="hover-primarytext">Contact Me</a>
+      </div>
     </div>
   </nav>
-  </div>
+
   <div class="content">
-    <strong class="title">Information</strong>
-    <div class="side-by-side">
-      <div>
-        First Name: <strong>Anak</strong> <br />
-        <br />
-        Last Name: <strong>Tentara</strong> <br />
-        <br />
-        Age: <strong>16+</strong> <br />
-        <br />
-        Nationality: <strong>Indonesia</strong> <br />
-        <br />
+    <!-- Main Content Area -->
+    <div class="flex-1 p-6">
+      <div class="mb-6">
+        <strong><span class="titletext" data-aos="fade-left">About Me</span></strong>
+        <p class="text-gray-400" data-aos="fade-left">Tentang Saya</p>
       </div>
-      <div class="divaboutme2">
-        Real Name: <strong>Haikal Mabrur</strong> <br />
-        <br />
-        Email: <strong>haikalmabrur125@gmail.com</strong> <br />
-        <br />
-        Discord: <strong>haikalmabrur</strong> <br />
-        <br />
-        Languages: <strong>Indonesia, English</strong> <br />
-        <br />
+      
+      <section data-aos="fade-up" id="aboutme">
+      <!-- Content Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-effect transition-transform">
+          <h3 class="text-xl text-white font-semibold">Haikal</h3>
+          <p class="text-gray-400">First Name</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-effect transition-transform">
+          <h3 class="text-xl text-white font-semibold">Mabrur</h3>
+          <p class="text-gray-400">Last Name</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-effect transition-transform">
+          <h3 class="text-xl text-white font-semibold">2008</h3>
+          <p class="text-gray-400">Age</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-effect transition-transform">
+          <h3 class="text-xl font-semibold flex text-white items-center space-x-2">
+            <span class="iconify" data-icon="twemoji:flag-for-indonesia" data-inline="false"></span>
+            <span>Indonesia</span>
+          </h3>
+          <p class="text-gray-400">Nationality</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-effect transition-transform">
+          <h3 class="text-xl text-white font-semibold">haikalmabrur125@gmail.com</h3>
+          <p class="text-gray-400">Email</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-effect transition-transform">
+          <h3 class="text-xl font-semibold flex text-white items-center space-x-2">
+            <!-- Ikon Bendera Indonesia -->
+            <span class="iconify" data-icon="twemoji:flag-for-indonesia" data-inline="false"></span>
+            <span>Indonesia,</span>
+            <span class="iconify" data-icon="twemoji:flag-for-united-kingdom" data-inline="false"></span>
+            <span>English</span>
+          </h3>
+          <p class="text-gray-400">Languages</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-effect transition-transform">
+          <h3 class="text-xl text-white font-semibold">haikalmabrur</h3>
+          <p class="text-gray-400">Discord</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-effect transition-transform">
+          <h3 class="text-xl text-white font-semibold">AnakTentara</h3>
+          <p class="text-gray-400">Nickname</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-effect transition-transform">
+          <h3 class="text-xl text-white font-semibold">Haikaru</h3>
+          <p class="text-gray-400">Alt Nickname</p>
+        </div>
+      </div>
+      <br>
+      <p class="bg-gray-800 p-6 rounded-lg text-center shadow-lg hover-effect transition-transform">
+        Tag For Me: Indonesia, Gamer, Developer, GameDev
+      </p>
+    </div>
+  </section>
+    <section data-aos="fade-up" id="myskill">
+    <div class="max-w-4xl mx-auto my-10 p-6 bg-gray-800 text-white rounded-lg shadow-lg">
+      <h2 class="text-3xl font-semibold text-center mb-6">My Skills</h2>
+
+      <!-- Skill 1: HTML -->
+      <div class="mb-6">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-white">HTML</span>
+          <span class="text-white">96%</span>
+        </div>
+        <div class="w-full bg-gray-600 rounded-full">
+          <div class="progress-bar" data-percent="96"></div>
+        </div>
+      </div>
+
+      <!-- Skill 2: CSS -->
+      <div class="mb-6">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-white">CSS</span>
+          <span class="text-white">96%</span>
+        </div>
+        <div class="w-full bg-gray-600 rounded-full">
+          <div class="progress-bar" data-percent="96"></div>
+        </div>
+      </div>
+
+      <!-- Skill 3: JavaScript -->
+      <div class="mb-6">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-white">JavaScript</span>
+          <span class="text-white">48%</span>
+        </div>
+        <div class="w-full bg-gray-600 rounded-full">
+          <div class="progress-bar" data-percent="48"></div>
+        </div>
+      </div>
+
+      <!-- Skill 4: Minecraft Server -->
+      <div class="mb-6">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-white">Developing Minecraft Server</span>
+          <span class="text-white">95%</span>
+        </div>
+        <div class="w-full bg-gray-600 rounded-full">
+          <div class="progress-bar" data-percent="95"></div>
+        </div>
+      </div>
+
+      <!-- Skill 5: Node.JS -->
+      <div class="mb-6">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-white">Node.JS</span>
+          <span class="text-white">84%</span>
+        </div>
+        <div class="w-full bg-gray-600 rounded-full">
+          <div class="progress-bar" data-percent="84"></div>
+        </div>
       </div>
     </div>
-    <br>
-    <br>
-    <div class="tag">
-      <h2>Tag for me: <strong>Indonesia, Gamer, Developer, GameDev.</strong></h2>
-    </div>
-    <br>
-    <br>
-    <section class="skills" id="skills">
-      <h3 class="skills-header">My Skills</h3>
-      <div class="skills-container">
-        <div class="skill-container">
-          <p>HTML</p>
-          <div class="percentage html-percentage">96%</div>
-          <div class="bar">
-            <span class="html"></span>
-          </div>
-        </div>
+  </section>
+  <section data-aos="fade-up" id="question">
+    <div class="max-w-6xl mx-auto my-10 p-6 bg-gray-700 text-white rounded-lg shadow-lg">
+      <h2 class="text-3xl font-semibold text-center mb-6">Pertanyaan yang Sering Diajukan</h2>
 
-        <div class="skill-container">
-          <p>CSS</p>
-          <div class="percentage css-percentage">96%</div>
-          <div class="bar">
-            <span class="css"></span>
-          </div>
-        </div>
-
-        <div class="skill-container">
-          <p>JavaScript</p>
-          <div class="percentage javascript-percentage">48%</div>
-          <div class="bar">
-            <span class="javascript"></span>
-          </div>
-        </div>
-
-        <div class="skill-container">
-          <p>Developing Minecraft Server</p>
-          <div class="percentage react-percentage">95%</div>
-          <div class="bar">
-            <span class="react"></span>
-          </div>
-        </div>
-
-        <div class="skill-container">
-          <p>Node.JS</p>
-          <div class="percentage node-percentage">84%</div>
-          <div class="bar">
-            <span class="node"></span>
-          </div>
+      <!-- Pertanyaan 1 -->
+      <div class="mb-4">
+        <button
+          class="w-full text-left text-xl font-medium text-white bg-gray-900 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          Apa Yang Bikin Haikal Tertarik Pada Dunia Informasi dan Teknologi?
+        </button>
+        <div class="mt-2 p-4 bg-gray-800 rounded-lg">
+          <p>Sejak kecil aku di besarkan bersama Elektronik. Aku jadi mudah memahami konsep, cara kerja, dan fungsi pada
+            suatu
+            teknologi. dan, aku berfikir.</p>
+          <p> <span style="padding-left: 5px; padding-right: 5px; background-color: orange; border-radius: 25px;"
+              class="text-gray-800">"ini sungguh keren, bagaimana caraku membuat orang terhibur dengan hobiku
+              ini?".</span></p>
         </div>
       </div>
-    </section>
-    <script src="/js/aboutme.js"></script>
-    <br />
-    <br />
+
+      <!-- Pertanyaan 2 -->
+      <div class="mb-4">
+        <button
+          class="w-full text-left text-xl font-medium text-white bg-gray-900 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          Haikal Bisa apa aja?
+        </button>
+        <div class="mt-2 p-4 bg-gray-800 rounded-lg">
+          <p>Aku saat ini masih mempelajari Bahasa Pemrograman seperti JavaScript, CSS,
+            C#, C++, dan PHP, dan aku juga bisa memahami maksud suatu kode. saat ini aku sedang mempelajari tentang
+            Server. </p>
+        </div>
+      </div>
+
+      <!-- Pertanyaan 3 -->
+      <div class="mb-4">
+        <button
+          class="w-full text-left text-xl font-medium text-white bg-gray-900 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          Waktu Sekolahnya Ke Ganggu gak?
+        </button>
+        <div class="mt-2 p-4 bg-gray-800 rounded-lg">
+          <p>Kalo dibilang ke ganggu sih.. engga ya. aku sudah membagi waktuku. saat Sekolah aku Sekolah, Pulangnya aku
+            lanjut Buka Komputer Sampai Jam 11 an lalu Tidur. Paginya Kerjain PR di Kelas. :v</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
   </div>
-  </div>
-  <div class="qna">
-    <h1>Apa Yang Bikin Haikal Tertarik Pada Dunia Informasi dan Teknologi?</h1>
-    <p>Sejak kecil aku di besarkan oleh Elektronik. Aku jadi mudah memahami konsep, cara kerja, dan fungsi pada suatu
-      teknologi. dan, sampai disaat aku sadar, <span>"ini sungguh keren, aku ingin membuat orang bahagia dengan cara
-        membuat hal yang sama seperti ini".</span></p>
-        <br>
-        <br>
-    <h1>Haikal Sudah Paham apa?</h1>
-    <p>Aku saat ini masih mempelajari, tapi sepertinya aku bisa membaca Kode dari Bahasa Pemrograman JavaScript, CSS,
-      C#, C++, apalagi HTML :). saat ini aku sedang memahami tentang Server (Maupun itu Game atau Website). </p>
-  </div>
+
   <script src="/js/hamburgermenu.js"></script>
+  <script src="/js/fading.js"></script>
+  <script src="/js/particle.js"></script>
+  <script src="/js/slider.js"></script>
   <script>
     feather.replace();
   </script>

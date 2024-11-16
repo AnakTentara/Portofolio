@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body,
+html {
+  height: 100%;
+  scrollbar-width: thin;
+}
+
+.hover-primarytext:hover {
+  color: #ff1f44;
+  display: block;
+}
+
+.backdrop-blur-lg {
+  backdrop-filter: blur(5px);
+  border-radius: 25px;
+  background-color: #5050505d;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.title {
+  color: #0a0a0a;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  display: inline-block;
+  margin-bottom: 20px;
+  background: linear-gradient(120deg,
+      #1c99fe 20.69%,
+      #7644ff 50.19%,
+      #fd4766 79.69%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  background: linear-gradient(120deg, #1c99fe, #7644ff, #fd4766);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.project-card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+/* Gradient effect for text */
+.text-gradient {
+  background: linear-gradient(120deg, #1c99fe 20%, #7644ff 50%, #fd4766 80%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Footer styles */
+footer {
+  background-color: #2d3748;
+}
+
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background-color: rgba(44, 44, 44, 0.4); /* Optional: adds slight background when sticky */
+  backdrop-filter: blur(10px); /* Optional: adds blur effect behind the navbar */
+  transition: top 0.3s ease-in-out; /* Smooth transition for sticky effect */
+  width: 100%; /* Ensure navbar is full width */
+}
+
+.sticky-navbar a {
+  color: white; /* Text color */
+}
+
+.sticky-navbar a:hover {
+  color: #ff1f44; /* Color when hovered */
+}
