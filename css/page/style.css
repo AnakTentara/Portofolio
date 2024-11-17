@@ -71,16 +71,36 @@ body {
   position: sticky;
   top: 0;
   z-index: 40;
-  background-color: rgba(44, 44, 44, 0.4); /* Optional: adds slight background when sticky */
-  backdrop-filter: blur(10px); /* Optional: adds blur effect behind the navbar */
-  transition: top 0.3s ease-in-out; /* Smooth transition for sticky effect */
-  width: 100%; /* Ensure navbar is full width */
+  background-color: rgba(44, 44, 44, 0.4);
+  /* Optional: adds slight background when sticky */
+  backdrop-filter: blur(10px);
+  /* Optional: adds blur effect behind the navbar */
+  transition: top 0.3s ease-in-out;
+  /* Smooth transition for sticky effect */
+  width: 100%;
+  /* Ensure navbar is full width */
 }
 
 .sticky-navbar a {
-  color: white; /* Text color */
+  color: white;
+  /* Text color */
 }
 
 .sticky-navbar a:hover {
-  color: #ff1f44; /* Color when hovered */
+  color: #ff1f44;
+  /* Color when hovered */
+}
+
+.console-output {
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  width: fit-content;
+  margin: 20px auto;
 }
